@@ -1,0 +1,23 @@
+.carousel-img {
+  height: 400px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.form-control {
+  height: 200px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.img {
+  border: 2px solid black;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
