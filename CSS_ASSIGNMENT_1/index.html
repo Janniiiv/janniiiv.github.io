@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Job Application Form</title>
+       
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <H1 class="title" id="main-title">Job Application</H1>
+<!-- navigation -->
+            <h2 class="green bold">Navigation</h2>
+                
+                    <ul class="nav">
+                        <li><a href="#application form">Job application Form</a></li>
+                        <li><a href="#quote">Quote</a></li>
+                    </ul>
+                
+    </header>
+
+    <p>
+        Welcome to the job application form. Please fill in the required fieds. At the end of the form, make sure to take note of the referral code and id, and click the send application button.
+    </p>
+
+<main>
+
+<section class="form-section">
+    <!--class selector: ".form-section" in external css-->
+    <article>
+        <!--application form starts here-->
+        <H2>Application Form</H2>
+            <form action="/submit" method="POST" autocomplete="on">
+                <Label>Full Name</Label>
+                    <input type="text" name="name" placeholder="eg.Jane Doe" minlength="1" maxlength="50"><br><br>
+                <Label>Email</Label>
+                    <input type="text" name="email" placeholder="xxxx@hotmail.com" minlength="1" maxlenght="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
+                <Label>Password
+                    <input type="password" name="password" required></Label><br><br>
+                <Label>Number
+                    <input type="number" name="number" min="5" max="10"></Label><br><br>
+                <Label>Expected Salary
+                    <input type="range" name="salary" min="0" max="5000" step="1000"></Label><br><br>
+                <Label>Job Preferences</Label><br>
+                    <input type="checkbox" name="job preference" value="remote work">Remote<br>
+                    <input type="checkbox" name="job preference" value="On Site">On Site<br><br>
+                <Label>Job Type</Label><br>
+                    <input type="radio" name="job type" value="full-time">Full-Time<br>
+                    <input type="radio" name="job type" value="part time">Part Time<br>
+                <Label>Job Positions</Label>
+                    <Select name="Position">
+                        <option value="intern">Intern</option>
+                        <option value="Analyst">Analyst</option>
+                        <option value="Engineer">Engineer</option>
+                    </Select><br><br>
+                <Label>Location Preference
+                    <input list="cities" name="cities">
+                    <datalist id="cities">
+                        <option value="Tampere">
+                        <option value="Helsinki">
+                        <option value="Turku">
+                    </datalist>
+                </Label><br><br>
+                <Label>Motivation Letter:<br>
+                    <textarea name="cover letter" rows="20" cols="20">Describe why you are interested in this position</textarea>
+
+                </Label><br><br>
+
+                <label> Referral Code (disabled):
+                    <input type="text" value="REF123" disabled>
+                </label><br><br>
+
+                <Label>Application ID (readonly):
+                    <input type="text" value="ID123" readonly>
+                </Label><br><br>
+
+                <input type="submit" Value="send application" aria-label="submit job application">
+
+            </form>
+
+    </article>
+</section>
+
+<aside> 
+    <blockquote id="quote"> "If you can dream it, you can do it."</blockquote>
+</aside>
+
+</main>
+
+<footer class="footer">JOB APPLICATION</footer>
+
+    </body>
+        </html>
